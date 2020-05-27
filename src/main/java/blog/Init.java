@@ -20,51 +20,24 @@ import java.util.logging.Logger;
  *
  * @author JadyMartins
  */
-public class Init {
+public class Init extends javax.swing.JFrame{
 
     /**
      * @param args the command line arguments
      */
-   public void initial(){
-        
- 
-     
-            
-        
-        try {
-            // TODO code application logic here
-            List<String> names = pickNameFromFile();
-           
-        } catch (IOException ex) {
-            Logger.getLogger(Init.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        
-        
-        
+    public Init(){
+        //blog.initComponents();
     }
+   
      
-    private static List<String> pickNameFromFile()throws IOException{
-        List<String> list  = new ArrayList<>();
-        Path pathToFile = Paths.get("src/test/resources/names.txt");
-        String compare = "Jady";
-        
-        BufferedReader br = Files.newBufferedReader(pathToFile);    
-        
-          
-        String line = br.readLine();
-        while(line != null){
-        if(line.equals(compare)){
-            System.out.println("Jady is on the list");
-            break;
-        }
-        }
-         
-        return list;
-        
-        
-    }
     
+    public static void main (String[] args){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new blog().setVisible(true);
+            }
+        });
+    }
 
     
 }
