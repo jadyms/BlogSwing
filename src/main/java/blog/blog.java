@@ -8,6 +8,8 @@ package blog;
 import java.awt.Color;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import javax.swing.SwingUtilities;
 
@@ -177,10 +179,16 @@ public class blog extends javax.swing.JFrame {
         
         //Clean the text area
           jTextArea2.setText("");
-          //Include new text
+     
           
+           //Include new text
           for(String c:comments){
-                  jTextArea2.append(c + "\n");  
+                 java.util.Date date=new java.util.Date();
+              String start = "Anonymous: ";
+              String when = " Posted on " + date;
+             
+
+              jTextArea2.append(start + c  + when + "\n");  
           }
     
       
