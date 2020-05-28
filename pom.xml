@@ -18,6 +18,12 @@
             <resource>
                 <directory>src/main/resources</directory>
             </resource>
+             <resource>
+                <directory>images</directory>
+                <includes>
+                    <include>coffee-desk-genpink.jpg</include>
+                </includes>
+            </resource>
         </resources>
         <plugins>
             <plugin>
